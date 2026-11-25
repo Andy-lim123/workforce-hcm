@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "demo:accounts": "node --env-file=.env.local scripts/create-demo-accounts.mjs",
+    "test": "node --test \"scripts/*.test.mjs\"",
+    "seed:check": "node --env-file=.env.local scripts/check-seed-schedule.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.2",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
